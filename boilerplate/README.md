@@ -2,29 +2,37 @@ React 模板模板。
 
 模板特性
 
-- 热加载：React，Redux
-- 高性能：构建和重构时间较短
-- ...
+- 热加载：支持 React 和 Redux 的热加载
+- 高性能：开发服务器实现预构建缓存，提升构建和热加载性能
+- 代码划分：支持多个第三方库的代码划分
 
-项目结构
+# 项目结构
 
 ```
 .
 ├── build
-│   ├── assets
-│   ├── cache
-│   └── manifest
+│   └── ...
 ├── doc
+│   ├── ...
+├── node_modules
 │   ├── ...
 ├── package.json
 ├── public
-│   ├── ...
+│   ├── favicon.ico
+│   └── index.html
+├── README.md
 ├── scripts
 │   ├── build.js
-│   ├── prebuild.js
 │   └── start.js
 ├── src
-│   ├── ...
+│   ├── actions
+│   ├── components
+│   ├── containers
+│   ├── index.js
+│   ├── middleware
+│   ├── reducers
+│   ├── routes.js
+│   └── store
 ├── webpack
 │   ├── env.js
 │   ├── paths.js
@@ -59,10 +67,6 @@ React 模板模板。
 - `appNodeModules`：第三方依赖路径
 
 ## 脚本设置
-- `scripts/prebuild.js`
-
-    第三方依赖一般是手工维护的，并不需要每次构建都重新编译。为了提升构建速度，该项目将第三方依赖预先编译。
-
 - `scripts/start.js`
 
     启动开发服务器
@@ -74,7 +78,6 @@ React 模板模板。
 ## 运行命令
 
 - `npm run lint`：检查代码
-- `npm run prebuild`：预编译
 - `npm start`：启动开发服务器
 - `npm run build`：生产环境编译
 
@@ -82,3 +85,8 @@ React 模板模板。
 
 # 进阶
 参考 `doc/实现思路`。
+
+
+# TODO
+- [ ] 解决生产环境打包构建的第三方库 hash 值一直变化的问题
+- [ ] 完善文档
