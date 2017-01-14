@@ -3,13 +3,7 @@ const runBuild = require('../webpack/runBuild');
 
 runBuild(paths, {
   dependencies: ['base', 'react'],
-  base: [
-    'core-js',
-    'babel-runtime',
-    'humps',
-    'lodash',
-    'normalizr',
-  ],
+  base: Infinity,
   react: [
     'react',
     'react-dom',

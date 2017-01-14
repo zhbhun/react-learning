@@ -25,8 +25,17 @@ function printErrors(summary, errors) {
   });
 }
 
-function createVendorPicker(dependencies) {
-  const regExp = new RegExp(`node_modules/(${dependencies.join('|')})($|\/)`);
+function createVendorPicker(dependencies, exceptions) {
+  let regExp = null;
+  let exceptionRegExps = null;
+  if (dependencies === Infinity) {
+    regExp = /node_modules/;
+    if (exceptions && exceptions.length > 0) {
+      exceptionRegExps = new RegExp(`node_modules/(${exceptions.join('|')})($|\/)`);
+    }
+  } else {
+    regExp = new RegExp(`node_modules/(${dependencies.join('|')})($|\/)`);
+  }
   return function isExternal(module) {
     var userRequest = module.userRequest;
 
@@ -34,7 +43,12 @@ function createVendorPicker(dependencies) {
       return false;
     }
 
-    return regExp.test(userRequest);
+    // TODO test not js module
+    if (exceptionRegExps && exceptionRegExps.test(userRequest)) {
+      return false;
+    } else {
+      return regExp.test(userRequest);
+    }
   }
 }
 
@@ -42,10 +56,15 @@ function createVendorPicker(dependencies) {
 function addVendors(paths, vendors) {
   const { dependencies } = vendors;
   return dependencies.map(function(dependency, index) {
-    return new webpack.optimize.CommonsChunkPlugin({ // [1]
+    const chunks = dependencies.slice(index + 1);
+    let exceptions = [];
+    chunks.forEach(function(chunk) {
+      exceptions = exceptions.concat(vendors[chunk]);
+    });
+    return new webpack.optimize.CommonsChunkPlugin({
       name: dependency,
-      chunks: ['main'].concat(dependencies.slice(index + 1)),
-      minChunks: createVendorPicker(vendors[dependency]),
+      chunks: ['main'].concat(chunks),
+      minChunks: createVendorPicker(vendors[dependency], exceptions),
     });
   }).reverse();
 }

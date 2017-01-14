@@ -161,3 +161,26 @@ TODO
 ## Chrome
 - React Dev Tool
 - Redux Dev Tool
+
+# TODO
+1. react: 19KB
+2. react + react-dom: 131.KB
+3. react + react-dom + react-router + react-redux + redux + redux-thunk + react-router-redux: 181.KB
+
+
+```
+react-with-addons.js	application/javascript	184 kB	2017-01-06T19:55:19.000Z
+react-with-addons.min.js	application/javascript	36.2 kB	2017-01-06T19:55:19.000Z
+react.js	application/javascript	128 kB	2017-01-06T19:55:19.000Z
+react.min.js	application/javascript	21.2 kB	2017-01-06T19:55:19.000Z
+
+---
+
+react-dom-server.js	application/javascript	544 kB	2017-01-06T19:55:20.000Z
+react-dom-server.min.js	application/javascript	119 kB	2017-01-06T19:55:20.000Z
+react-dom.js	application/javascript	620 kB	2017-01-06T19:55:20.000Z
+react-dom.min.js	application/javascript	124 kB	2017-01-06T19:55:20.000Z
+
+```
+
+总共压缩后 74.4 KB
