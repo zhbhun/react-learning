@@ -5,9 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "lint": "eslint ./src",
-    "build:pre": "babel-node ./scripts/prebuild.js",
     "start": "babel-node ./scripts/start.js",
-    "build": "babel-node ./scripts/build.js"
+    "build": "rimraf ./build && babel-node ./scripts/build.js"
   },
   "author": "zhbhun",
   "license": "ISC",

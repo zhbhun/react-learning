@@ -49,10 +49,8 @@ React 模板模板。
 项目的路径信息默认配置在 `webpack/paths.js`，主要包含项目的源代码输入，构建输出等路径信息。
 
 - `app`：根路径
+- `appPrebuild`:构建缓存
 - `appBuild`：构建输出路径
-- `appBuildAssets`：生产环境的构建输出路径
-- `appBuildCache`：预编译构建输出路径
-- `appBuildManifest`：预编译构建信息存储路径
 - `appPublic`：静态资源路径
 - `appHtml`：入口 HTML 页面路径
 - `appIndexJs`：源代码入口路径

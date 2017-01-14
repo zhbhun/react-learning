@@ -25,43 +25,38 @@ function printErrors(summary, errors) {
   });
 }
 
-function addCaches(paths, assets) {
-  const { scripts = [], styles = [] } = assets;
-  return scripts.reverse().map(function(script) {
-    return new AddAssetHtmlPlugin({
-      filepath: path.resolve(paths.appBuildCache, `./js/${script}.js`),
-      hash: true,
-      includeSourcemap: false,
-      outputPath: 'js',
-      publicPath: '/js',
-      typeOfAsset: 'js',
-    });
-  })
-  .concat(styles.reverse().map(function(style) {
-    return new AddAssetHtmlPlugin({
-      filepath: path.resolve(paths.appBuildCache, `./css/${style}.js`),
-      hash: true,
-      includeSourcemap: false,
-      outputPath: 'css',
-      publicPath: '/css',
-      typeOfAsset: 'css',
-    });
-  }))
-  .concat(scripts.map(function(script) {
-    return new webpack.DllReferencePlugin({
-      context: paths.app,
-      manifest: require(paths.appBuildManifest + `/${script}-manifest.json`),
-    });
-  }));
+function createVendorPicker(dependencies) {
+  const regExp = new RegExp(`node_modules/(${dependencies.join('|')})($|\/)`);
+  return function isExternal(module) {
+    var userRequest = module.userRequest;
+
+    if (typeof userRequest !== 'string') {
+      return false;
+    }
+
+    return regExp.test(userRequest);
+  }
 }
 
 
-function runBuild(paths, caches = []) {
+function addVendors(paths, vendors) {
+  const { dependencies } = vendors;
+  return dependencies.map(function(dependency, index) {
+    return new webpack.optimize.CommonsChunkPlugin({ // [1]
+      name: dependency,
+      chunks: ['main'].concat(dependencies.slice(index + 1)),
+      minChunks: createVendorPicker(vendors[dependency]),
+    });
+  }).reverse();
+}
+
+
+function runBuild(paths, vendors = []) {
   const config = WebpackProdConfigFactory({
     paths,
     config: {
       plugins: [
-        ...(addCaches(paths, caches)),
+        ...(addVendors(paths, vendors) || []),
       ],
     },
   });

@@ -12,6 +12,8 @@ const defaultPaths = require('./paths');
 // Get environment variables to inject into our app.
 const defaultEnv = getClientEnvironment();
 
+const entry = 'dll';
+
 /**
  * Webpack Dll 配置生成器
  *
@@ -22,11 +24,11 @@ const defaultEnv = getClientEnvironment();
  * @param {bollean} development
  * @param {array}   dependencies
  */
-function factory(params = {}, development, dependencies) {
+function WebpackDllConfigFactory(params = {}) {
   const paths = Object.assign({}, defaultPaths, params.paths);
   const env = Object.assign({}, defaultEnv, params.env);
+  const dependencies = params.dependencies || [];
   let {
-    entry,
     output = {},
     resolve = {},
     module = {},
@@ -34,75 +36,32 @@ function factory(params = {}, development, dependencies) {
     ...config,
   } =  params.config || {};
 
-  if (development) {
-    output = Object.assign({}, output, {
-      // Add /* filename */ comments to generated require()s in the output.
-      pathinfo: true,
-      // 不使用 hash
-      filename: 'js/[name].js',
-    });
-    config = Object.assign({}, config, {
-      debug: true,
-      // 提供 source-map，以便调试代码
-      devtool: 'source-map',
-    });
-  } else {
-    plugins.push(
-      // 设定运行环境为 production，以便优化代码
-      new webpack.DefinePlugin({
-        'process.env': {
-          NODE_ENV: JSON.stringify('production'),
-        },
-      }),
-      // Minify the code.
-      new webpack.optimize.UglifyJsPlugin({
-        compress: {
-          screw_ie8: true, // React doesn't support IE8
-          warnings: false,
-        },
-        mangle: {
-          screw_ie8: true,
-        },
-        output: {
-          comments: false,
-          screw_ie8: true,
-        },
-      }),
-    );
-  }
-
-  // 存在共享的预编译文件
-  if (dependencies && dependencies.length > 0) {
-    dependencies.forEach(function(dependency) {
-      const manifestJSONPath = path.resolve(paths.appBuildManifest, `${dependency}-manifest.json`);
-      const manifestJSON = fs.readFileSync(manifestJSONPath, 'utf-8');
-      const manifest = JSON.parse(manifestJSON);
-      plugins.push(
-        new webpack.DllReferencePlugin({
-          context: '.',
-          manifest,
-        }),
-      );
-    });
-  }
-
   // This is the development configuration.
   // It is focused on developer experience and fast rebuilds.
   // The production configuration is different and lives in a separate file.
   return {
     cache: true,
 
+    debug: true,
+
+    // 提供 source-map，以便调试代码
+    devtool: 'source-map',
+
     // These are the "entry points" to our application.
     // This means they will be the "root" imports that are included in JS bundle.
-    entry,
+    entry: {
+      [entry]: dependencies,
+    },
 
     output: {
       // Next line is not used in dev but WebpackDevServer crashes without it:
-      path: paths.appBuildCache,
+      path: paths.appPrebuild,
+      // Add /* filename */ comments to generated require()s in the output.
+      pathinfo: true,
       // This does not produce a real file. It's just the virtual path that is
       // served by WebpackDevServer in development. This is the JS bundle
       // containing code from all our entry points, and the Webpack runtime.
-      filename: 'js/[name].js',
+      filename: '[name].js',
       library: '[name]_library',
       ...output,
     },
@@ -156,7 +115,7 @@ function factory(params = {}, development, dependencies) {
           loader: 'url',
           query: {
             limit: 10000,
-            name: 'static/media/[name].[hash:8].[ext]',
+            name: 'media/[name].[hash:8].[ext]',
           },
         },
         // Process JS with Babel.
@@ -195,7 +154,7 @@ function factory(params = {}, development, dependencies) {
           test: /\.svg$/,
           loader: 'file',
           query: {
-            name: 'static/media/[name].[hash:8].[ext]',
+            name: 'media/[name].[hash:8].[ext]',
           },
         },
         ...(module.loaders || [])
@@ -220,7 +179,7 @@ function factory(params = {}, development, dependencies) {
       new webpack.optimize.OccurrenceOrderPlugin(true),
       new webpack.optimize.DedupePlugin(),
       new webpack.DllPlugin({
-        path: path.resolve(paths.appBuildManifest, '[name]-manifest.json'),
+        path: path.resolve(paths.appPrebuild, '[name].json'),
         name: '[name]_library',
       }),
       ...plugins,
@@ -236,30 +195,6 @@ function factory(params = {}, development, dependencies) {
   };
 }
 
-/**
- * Webpack Dll 配置生成器，支持代码划分
- *
- * @param {object}  params
- * @param {object}  params.enrtys
- * @param {object}  params.enrtys.name 入口名称
- * @param {Array}   params.enrtys.dependencies 入口共享依赖
- * @param {Array}   params.enrtys.entry 入口模块集合
- * @param {object}  params.paths
- * @param {object}  params.env
- * @param {object}  params.config
- * @param {boolean} development
- */
-function WebpackDllConfigFactory(params = {}, development = true) {
-  const { name, dependencies, entry } = params.entrys;
-  const newParams = Object.assign({}, params, {
-    config: {
-      ...(params.config || {}),
-      entry: {
-        [name]: entry,
-      }
-    },
-  });
-  return factory(newParams, development, dependencies);
-}
+WebpackDllConfigFactory.entry = entry;
 
 module.exports = WebpackDllConfigFactory;

@@ -31,10 +31,8 @@ var nodePaths = (process.env.NODE_PATH || '')
 
 module.exports = {
   app: appDirectory,
+  appPrebuild: resolveApp('.cache/Prebuild'),
   appBuild: resolveApp('build'),
-  appBuildAssets: resolveApp('build/assets'),
-  appBuildCache: resolveApp('build/cache'),
-  appBuildManifest: resolveApp('build/manifest'),
   appPublic: resolveApp('public'),
   appHtml: resolveApp('public/index.html'),
   appIndexJs: resolveApp('src/index.js'),

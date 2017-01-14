@@ -19,6 +19,7 @@ function ensureSlash(path, needsSlash) {
   }
 }
 
+
 /**
  * Webpack 开发配置生成器
  *
@@ -51,9 +52,9 @@ function WebpackProdConfigFactory(params = {}) {
 
   // Assert this just to be safe.
   // Development builds of React are slow and not intended for production.
-  if (env['process.env'].NODE_ENV !== '"production"') {
-    throw new Error('Production builds must have NODE_ENV=production.');
-  }
+  // if (env['process.env'].NODE_ENV !== '"production"') {
+  //   throw new Error('Production builds must have NODE_ENV=production.');
+  // }
 
   const {
     entry = [],
@@ -78,14 +79,17 @@ function WebpackProdConfigFactory(params = {}) {
     // devtool: 'source-map',
 
     // In production, we only want to load the polyfills and the app code.
-    entry: [
-      paths.appIndexJs,
-      ...entry,
-    ],
+    entry: {
+      main:[
+        paths.appIndexJs,
+        ...entry,
+      ]
+    },
 
     output: {
       // The build folder.
-      path: paths.appBuildAssets,
+      path: paths.appBuild,
+      pathinfo: true,
       // Generated JS file names (with nested folders).
       // There will be one main bundle, and one file per asynchronous chunk.
       // We don't currently advertise code splitting but Webpack supports it.
@@ -227,18 +231,19 @@ function WebpackProdConfigFactory(params = {}) {
       // Generates an `index.html` file with the <script> injected.
       new HtmlWebpackPlugin({
         inject: true,
+        chunksSortMode: 'dependency',
         template: paths.appHtml,
         minify: {
           removeComments: true,
-          collapseWhitespace: true,
+        //   collapseWhitespace: true,
           removeRedundantAttributes: true,
           useShortDoctype: true,
           removeEmptyAttributes: true,
           removeStyleLinkTypeAttributes: true,
           keepClosingSlash: true,
-          minifyJS: true,
-          minifyCSS: true,
-          minifyURLs: true,
+        //   minifyJS: true,
+        //   minifyCSS: true,
+        //   minifyURLs: true,
         },
       }),
       // Makes some environment variables available to the JS code, for example:

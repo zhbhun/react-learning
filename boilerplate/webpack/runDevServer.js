@@ -13,6 +13,7 @@ const webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
 const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin');
 
+const runPrebuild = require('./runPrebuild');
 const setupCompiler = require('./setupCompiler');
 const WebpackDevConfigFactory = require('./WebpackDevConfigFactory');
 
@@ -21,7 +22,7 @@ const isInteractive = process.stdout.isTTY;
 function startServer(compiler, { config, host, port, protocol }) {
   const devServer = new WebpackDevServer(compiler, {
     // Enable gzip compression of generated files.
-    // compress: true,
+    compress: true,
     // Silence WebpackDevServer's own logs since they're generally not useful.
     // It will still show compile warnings and errors with this setting.
     clientLogLevel: 'none',
@@ -93,48 +94,39 @@ function startServer(compiler, { config, host, port, protocol }) {
   });
 }
 
-function addCaches(paths, assets) {
-  const { scripts = [], styles = [] } = assets;
-  return scripts.reverse().map(function(script) {
-    return new AddAssetHtmlPlugin({
-      filepath: path.resolve(paths.appBuildCache, `./js/${script}.js`),
+function addPrebuildCache(paths, name) {
+  return [
+    new AddAssetHtmlPlugin({
+      filepath: path.resolve(paths.appPrebuild, `./${name}.js`),
       includeSourcemap: true,
       outputPath: 'js',
       publicPath: '/js',
       typeOfAsset: 'js',
-    });
-  })
-  .concat(styles.reverse().map(function(style) {
-    return new AddAssetHtmlPlugin({
-      filepath: path.resolve(paths.appBuildCache, `./css/${style}.js`),
-      includeSourcemap: true,
-      outputPath: 'css',
-      publicPath: '/css',
-      typeOfAsset: 'css',
-    });
-  }))
-  .concat(scripts.map(function(script) {
-    return new webpack.DllReferencePlugin({
+    }),
+    new webpack.DllReferencePlugin({
       context: paths.app,
-      manifest: require(paths.appBuildManifest + `/${script}-manifest.json`),
-    });
-  }));
+      manifest: require(paths.appPrebuild + `/${name}.json`),
+    }),
+  ];
 }
 
-function runDevServer(paths, caches) {
-  const protocol = process.env.HTTPS === 'true' ? "https" : "http";
-  const host = process.env.HOST || 'localhost';
-  const port = process.env.PORT || 3000;
-  const config = WebpackDevConfigFactory({
-    paths,
-    config: {
-      plugins: [
-        ...(addCaches(paths, caches)),
-      ],
-    },
+function runDevServer(paths, dependencies) {
+  const packageDependencies = Object.keys(require(paths.appPackageJson).dependencies);
+  runPrebuild(paths, dependencies.concat(packageDependencies), function callback(prebuild) {
+    const protocol = process.env.HTTPS === 'true' ? "https" : "http";
+    const host = process.env.HOST || 'localhost';
+    const port = process.env.PORT || 3000;
+    const config = WebpackDevConfigFactory({
+      paths,
+      config: {
+        plugins: [
+          ...(addPrebuildCache(paths, prebuild)),
+        ],
+      },
+    });
+    const compiler = setupCompiler(config ,{ host, port, protocol });
+    startServer(compiler, { config, host, port, protocol });
   });
-  const compiler = setupCompiler(config ,{ host, port, protocol });
-  startServer(compiler, { config, host, port, protocol });
 }
 
 module.exports = runDevServer;
