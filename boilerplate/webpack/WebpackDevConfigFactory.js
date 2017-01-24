@@ -140,6 +140,7 @@ function WebpackDevConfigFactory(params = {}) {
             /\.html$/,
             /\.(js|jsx)$/,
             /\.css$/,
+            /\.less$/,
             /\.json$/,
             /\.svg$/,
           ],
@@ -171,7 +172,7 @@ function WebpackDevConfigFactory(params = {}) {
           loader: 'style!css?importLoaders=1!postcss',
         },
         {
-          test: /\.less/,
+          test: /\.less$/,
           loader: 'style!css?importLoaders=1!postcss!less',
         },
         // JSON is not enabled by default in Webpack but both Node and Browserify
