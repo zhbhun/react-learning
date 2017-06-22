@@ -1,5 +1,10 @@
 - [React Enlightenment](https://www.reactenlightenment.com/)
 
+
+# 书籍
+- 《React Best Practice and Design Patterns》
+- [awesome-react-components](https://github.com/brillout/awesome-react-components)
+
 # 工具
 - [facebookincubator/create-react-app](https://github.com/facebookincubator/create-react-app) - Create React apps with no build configuration. 18038 ★
 - [insin/nwb](https://github.com/insin/nwb) - Create React/Preact/Inferno apps, React libraries and other npm modules for the web, with no configuration (until you need it). 1560 ★
