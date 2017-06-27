@@ -1,3 +1,8 @@
+- [如何更好的组织 React 项目的代码？](https://medium.com/@alexmngn/how-to-better-organize-your-react-applications-2fd3ea1920f1)
+- [create-next-app](https://github.com/segmentio/create-next-app)
+
+---
+
 React 模板模板。
 
 模板特性
