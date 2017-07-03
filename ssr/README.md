@@ -1,1 +1,2 @@
 - [next.js](https://github.com/zeit/next.js)
+- [Server-Side React Rendering](https://css-tricks.com/server-side-react-rendering/)
