@@ -1,6 +1,10 @@
 - https://react.amsterdam/#talks
 - [React Enlightenment](https://www.reactenlightenment.com/)
 - [Facebook 官方回应社区对 React 的质疑](https://medium.com/@dan_abramov/hey-thanks-for-feedback-bf9502689ca4)
+- [Techniques for decomposing React components](https://medium.com/dailyjs/techniques-for-decomposing-react-components-e8a1081ef5da)
+
+# 对比
+- [Why I Chose React Over Vue](https://medium.com/@CalinLeafshade/why-i-chose-react-over-vue-3dd9a230b507)
 
 # 书籍
 - 《React Best Practice and Design Patterns》
