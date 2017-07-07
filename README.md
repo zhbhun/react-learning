@@ -21,6 +21,7 @@
 - [satya164/quik](https://github.com/satya164/quik) - A quick way to prototype and build apps with React and Babel with zero-setup. - 367 ★
 - [rocjs/roc](https://github.com/rocjs/roc) - Modern JavaScript Development Ecosystem. 357 ★
 - [kriasoft/react-app](https://github.com/kriasoft/react-app) - CLI tools and templates for authoring React applications with a single dev dependency and no configurations. 336 ★
+- [create-component-app](https://github.com/CVarisco/create-component-app)
 
 # 衍生
 - [zeit/next.js](https://github.com/zeit/next.js) - A minimalistic framework for universal server-rendered React applications. 7934 ★
