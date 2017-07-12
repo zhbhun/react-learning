@@ -1,2 +1,8 @@
 - [next.js](https://github.com/zeit/next.js)
 - [Server-Side React Rendering](https://css-tricks.com/server-side-react-rendering/)
+- [ultimate-hot-reloading-example](https://github.com/glenjamin/ultimate-hot-reloading-example/blob/master/client/reducers/index.js)
+- [react-webpack-server-side-example](https://github.com/webpack/react-webpack-server-side-example)
+- [Which method is faster, express : Server-side rendering vs client-side rendering](https://stackoverflow.com/questions/33359504/which-method-is-faster-express-server-side-rendering-vs-client-side-rendering)
+- [webpack-isomorphic-tools](https://github.com/halt-hammerzeit/webpack-isomorphic-tools)
+- [universal-webpack](https://github.com/halt-hammerzeit/universal-webpack)
+- https://github.com/DavidWells/isomorphic-react-example
