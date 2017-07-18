@@ -6,3 +6,5 @@
 - [webpack-isomorphic-tools](https://github.com/halt-hammerzeit/webpack-isomorphic-tools)
 - [universal-webpack](https://github.com/halt-hammerzeit/universal-webpack)
 - https://github.com/DavidWells/isomorphic-react-example
+- http://www.aliued.com/?p=3077
+- https://github.com/joeyguo/blog/issues/9
