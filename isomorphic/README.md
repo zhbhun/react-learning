@@ -8,3 +8,4 @@
 - https://github.com/DavidWells/isomorphic-react-example
 - http://www.aliued.com/?p=3077
 - https://github.com/joeyguo/blog/issues/9
+- [React+Redux 同构应用开发](http://www.aliued.com/?p=3077)
