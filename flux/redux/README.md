@@ -63,3 +63,13 @@
 
 # 衍生项目
 - https://github.com/dvajs/dva
+
+# 常见问题
+## Container VS Component
+- [Presentational and Container Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0)
+- [Presentational and Container Components](https://redux.js.org/docs/basics/UsageWithReact.html#presentational-and-container-components)
+- [container vs component?](https://github.com/reactjs/redux/issues/756)
+- [React Redux container component](https://stackoverflow.com/questions/42290287/react-redux-container-component)
+- [How to use Presentational/Container components in a Redux app](https://github.com/reactjs/redux/issues/756)
+- [Four Strategies for Organizing Code](https://github.com/reactjs/redux/issues/419)
+- [The React + Redux Container Pattern Building Responsive Applications, Cleanly, is Hard](http://www.thegreatcodeadventure.com/the-react-plus-redux-container-pattern/)
