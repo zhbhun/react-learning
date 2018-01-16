@@ -26,3 +26,10 @@
 # 衍生
 - [zeit/next.js](https://github.com/zeit/next.js) - A minimalistic framework for universal server-rendered React applications. 7934 ★
 - [gatsbyjs/gatsby](https://github.com/gatsbyjs/gatsby) - Transform plain text into dynamic blogs and websites using React.js. 7031 ★
+
+# 问题
+## Component VS PureComponent
+- [在React.js中使用PureComponent的重要性和使用方式](http://www.zcfy.cc/article/why-and-how-to-use-purecomponent-in-react-js-60devs-2344.html)
+- [谈一谈创建React Component的几种方式](https://segmentfault.com/a/1190000008402834)
+- [React.Component vs React.PureComponent](https://stackoverflow.com/questions/41340697/react-component-vs-react-purecomponent)
+- [When to use Component or PureComponent](https://codeburst.io/when-to-use-component-or-purecomponent-a60cfad01a81)
