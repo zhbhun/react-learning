@@ -1,3 +1,8 @@
+- https://github.com/facebook/react
+- https://github.com/reactjs/rfcs
+- https://github.com/reactjs/reactjs.org
+
+
 - https://react.amsterdam/#talks
 - [React Enlightenment](https://www.reactenlightenment.com/)
 - [Facebook 官方回应社区对 React 的质疑](https://medium.com/@dan_abramov/hey-thanks-for-feedback-bf9502689ca4)
