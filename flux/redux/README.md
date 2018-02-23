@@ -31,6 +31,7 @@
 - [redux里面如何正确的设计reducer？](https://cnodejs.org/topic/5718a0c23bf746cd50352ba4)
 - [ReactJS Redux 里面如何正确的设计 reducer？](https://ruby-china.org/topics/29810)
 - [如何优雅的设计Redux的Store中的State树](http://www.cnblogs.com/geoffgu/p/6273956.html)
+- [学习Redux刷新了我的前端App状态管理观](https://segmentfault.com/a/1190000007397551)
 
 # 项目结构
 - http://redux.js.org/docs/faq/CodeStructure.html
@@ -61,6 +62,8 @@
 - https://github.com/redux-observable/redux-observable
 - https://github.com/redux-offline/redux-offline
 
+# 项目示例
+- [react-redux-realworld-example-app](https://github.com/gothinkster/react-redux-realworld-example-app)
 
 # 衍生项目
 - https://github.com/dvajs/dva
