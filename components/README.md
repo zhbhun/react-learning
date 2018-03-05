@@ -16,6 +16,7 @@
 - [amazeui-react](https://github.com/amazeui/amazeui-react)
 - [amazeui-touch](https://github.com/amazeui/amazeui-touch)
 - [react-native-web](https://github.com/necolas/react-native-web) - React Native for Web. 3527 ★
+- [react-web](https://github.com/taobaofed/react-web) - A framework for building web apps with React Native compatible API. 3183 ★
 - [react-widgets](https://github.com/jquense/react-widgets) - An à la carte set of polished, extensible, and accessible inputs built for React. 1218 ★
 
 # Drawers

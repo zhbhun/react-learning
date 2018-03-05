@@ -13,3 +13,8 @@
 - [animated](https://github.com/animatedjs/animated)
 - [animate](https://github.com/react-component/animate)
 - [ant-motion](https://github.com/ant-design/ant-motion/)
+
+---
+
+- https://reactjs.org/docs/animation.html#high-level-api-reactcsstransitiongroup
+- https://reactcommunity.org/react-transition-group/
