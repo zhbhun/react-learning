@@ -4,6 +4,7 @@
 # 教程
 - [react-redux-links](https://github.com/markerikson/react-redux-links)
 - https://github.com/xgrommx/awesome-redux
+- https://www.gitbook.com/book/tonyhb/redux-without-profanity/details
 - https://github.com/happypoulp/redux-tutorial
 - https://github.com/markerikson/redux-ecosystem-links
 - [js-stack-from-scratch](https://github.com/verekia/js-stack-from-scratch)
