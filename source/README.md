@@ -20,3 +20,8 @@
 - [深入理解react（源码分析）](https://github.com/lanjingling0510/blog/issues/1)
 - [React 源码解析](https://zhuanlan.zhihu.com/p/28697362)
 - [React 源码分析](https://www.gitbook.com/book/icepy/react/details)
+
+---
+
+- [react-fiber-architecture](https://github.com/acdlite/react-fiber-architecture)
+- [Making-a-custom-React-renderer](https://github.com/nitin42/Making-a-custom-React-renderer)
