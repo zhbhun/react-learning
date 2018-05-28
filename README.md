@@ -11,6 +11,10 @@
 # 对比
 - [Why I Chose React Over Vue](https://medium.com/@CalinLeafshade/why-i-chose-react-over-vue-3dd9a230b507)
 
+# 教程
+
+- [mackintosh-windows](https://github.com/agm1984/mackintosh-windows)
+
 # 书籍
 - 《React Best Practice and Design Patterns》
 - [awesome-react-components](https://github.com/brillout/awesome-react-components)
