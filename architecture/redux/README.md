@@ -78,3 +78,7 @@
 - [How to use Presentational/Container components in a Redux app](https://github.com/reactjs/redux/issues/756)
 - [Four Strategies for Organizing Code](https://github.com/reactjs/redux/issues/419)
 - [The React + Redux Container Pattern Building Responsive Applications, Cleanly, is Hard](http://www.thegreatcodeadventure.com/the-react-plus-redux-container-pattern/)
+
+---
+
+- [Redux从设计到源码](https://www.jianshu.com/p/2f67fa85dd84)

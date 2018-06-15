@@ -37,6 +37,7 @@
 - [gatsbyjs/gatsby](https://github.com/gatsbyjs/gatsby) - Transform plain text into dynamic blogs and websites using React.js. 7031 ★
 
 # 问题
+
 ## Component VS PureComponent
 - [在React.js中使用PureComponent的重要性和使用方式](http://www.zcfy.cc/article/why-and-how-to-use-purecomponent-in-react-js-60devs-2344.html)
 - [谈一谈创建React Component的几种方式](https://segmentfault.com/a/1190000008402834)
