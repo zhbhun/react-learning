@@ -14,6 +14,7 @@
 # 教程
 
 - [mackintosh-windows](https://github.com/agm1984/mackintosh-windows)
+- [carlleton/reactjs101](https://github.com/carlleton/reactjs101/tree/zh-CN)
 
 # 书籍
 - 《React Best Practice and Design Patterns》
