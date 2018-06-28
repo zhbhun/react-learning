@@ -15,6 +15,7 @@
 
 - [mackintosh-windows](https://github.com/agm1984/mackintosh-windows)
 - [carlleton/reactjs101](https://github.com/carlleton/reactjs101/tree/zh-CN)
+- [hello-react-native-custom-renderer](https://github.com/agenthunt/hello-react-native-custom-renderer)
 
 # 书籍
 - 《React Best Practice and Design Patterns》
