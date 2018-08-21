@@ -1,3 +1,6 @@
+源码分析
+=======
+
 - https://github.com/Bogdan-Lyashenko/Under-the-hood-ReactJS
 - [janryWang/react-study](https://github.com/janryWang/react-study)
 - [purplebamboo/little-reactjs](https://github.com/purplebamboo/little-reactjs)
@@ -21,7 +24,8 @@
 - [React 源码解析](https://zhuanlan.zhihu.com/p/28697362)
 - [React 源码分析](https://www.gitbook.com/book/icepy/react/details)
 
----
+## Fiber
 
 - [react-fiber-architecture](https://github.com/acdlite/react-fiber-architecture)
 - [Making-a-custom-React-renderer](https://github.com/nitin42/Making-a-custom-React-renderer)
+- [React的新引擎—React Fiber是什么？](http://www.infoq.com/cn/articles/what-the-new-engine-of-react)
