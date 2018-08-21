@@ -1,3 +1,4 @@
+- https://github.com/oliviertassinari/react-swipeable-views
 - [react-slick](https://github.com/akiran/react-slick)
 - [nuka-carousel](https://github.com/FormidableLabs/nuka-carousel)
 - [react-swipe](https://github.com/voronianski/react-swipe)

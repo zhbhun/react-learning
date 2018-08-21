@@ -21,10 +21,16 @@
 - [scroll-behavior](https://github.com/taion/scroll-behavior)
 - [react-router-restore-scroll](https://github.com/ryanflorence/react-router-restore-scroll)
 
+### 缓存页面
+
+- [Reuse existing rendered component in react-router-dom](https://github.com/ReactTraining/react-router/issues/5195)
+- [Prevent react-router re-creating component when switching links](https://stackoverflow.com/questions/38460633/prevent-react-router-re-creating-component-when-switching-links)
+
 ## 其他
 
 - https://github.com/pillarjs/path-to-regexp#readme
 - https://github.com/taion/react-router-scroll
+- https://github.com/ytase/react-router-scroll#readme
 - https://github.com/berzniz/react-overdrive
 - https://github.com/maisano/react-router-transition
 - https://github.com/trungdq88/react-router-page-transition
@@ -32,3 +38,4 @@
 - https://github.com/ReactTraining/react-router/issues/4203
 - https://github.com/LeoLeBras/react-router-navigation
 - https://github.com/Traviskn/react-router-native-stack
+- [Differentiate between Back/Forward buttons for different animations](https://github.com/browserstate/history.js/issues/290)
