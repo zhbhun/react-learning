@@ -71,6 +71,11 @@ Redux
     - [redux-actions](https://github.com/reduxactions/redux-actions)
     - [dva](https://github.com/dvajs/dva)
 
+        - https://github.com/dvajs/dva/issues/1840
+
+    - [ducks-modular-redux](https://github.com/erikras/ducks-modular-redux)
+    - https://github.com/Foveluy/rectx
+
 - 其他
 
     - [react-redux-universal-hot-example](https://github.com/erikras/react-redux-universal-hot-example)
@@ -80,6 +85,19 @@ Redux
     - https://github.com/relax/relax
     - https://github.com/zalmoxisus/redux-devtools-extension
     - https://github.com/erikras/ducks-modular-redux
+
+## 常见问题
+
+- 项目结构
+
+    - https://redux.js.org/faq#structure-file-structure
+    - [Four Strategies for Organizing Code](https://medium.com/@msandin/strategies-for-organizing-code-2c9d690b6f33)
+    - [Structuring projects and naming components in React](https://hackernoon.com/structuring-projects-and-naming-components-in-react-1261b6e18d76)
+    - [Folder organization of components vs containers](https://github.com/reduxjs/redux/issues/1618)
+    - [container vs component? ](https://github.com/reduxjs/redux/issues/756)
+    - [Presentational and Container Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0)
+    - [Switches to a domain-sliced approach to our Redux setup.](https://github.com/infinitered/ignite/pull/356)
+    - [Saga Practice](https://github.com/infinitered/ignite/issues/158)
 
 ## 项目示例
 
@@ -99,6 +117,15 @@ Redux
 - [How to use Presentational/Container components in a Redux app](https://github.com/reactjs/redux/issues/756)
 - [Four Strategies for Organizing Code](https://github.com/reactjs/redux/issues/419)
 - [The React + Redux Container Pattern Building Responsive Applications, Cleanly, is Hard](http://www.thegreatcodeadventure.com/the-react-plus-redux-container-pattern/)
+
+
+### 业务状态 VS 应用状态 VS 组件状态
+
+- 业务状态：类似于数据库表结构
+- 应用状态：登录会话
+- 组件状态：路由，表单，列表，表格
+
+ps：每个页面独立维护对业务数据的索引，例如两个路由访问同一地址，各自维护私有的业务数据的引用。
 
 ---
 

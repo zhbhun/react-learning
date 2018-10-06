@@ -18,8 +18,8 @@
 - [hello-react-native-custom-renderer](https://github.com/agenthunt/hello-react-native-custom-renderer)
 
 # 书籍
+
 - 《React Best Practice and Design Patterns》
-- [awesome-react-components](https://github.com/brillout/awesome-react-components)
 
 # 工具
 - [facebookincubator/create-react-app](https://github.com/facebookincubator/create-react-app) - Create React apps with no build configuration. 18038 ★
@@ -37,6 +37,9 @@
 # 衍生
 - [zeit/next.js](https://github.com/zeit/next.js) - A minimalistic framework for universal server-rendered React applications. 7934 ★
 - [gatsbyjs/gatsby](https://github.com/gatsbyjs/gatsby) - Transform plain text into dynamic blogs and websites using React.js. 7031 ★
+- https://github.com/developit/preact
+- https://github.com/infernojs/inferno
+- https://nerv.aotu.io/
 
 # 问题
 
@@ -45,3 +48,7 @@
 - [谈一谈创建React Component的几种方式](https://segmentfault.com/a/1190000008402834)
 - [React.Component vs React.PureComponent](https://stackoverflow.com/questions/41340697/react-component-vs-react-purecomponent)
 - [When to use Component or PureComponent](https://codeburst.io/when-to-use-component-or-purecomponent-a60cfad01a81)
+
+---
+
+- https://react.rocks/
