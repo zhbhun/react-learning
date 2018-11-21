@@ -12,6 +12,11 @@ const routes = [
     path: '/react/component/lifecycle',
     title: 'Lifecycle',
     component: require('./lifecycle').default,
+  },
+  {
+    path: '/react/ref',
+    title: 'Refs',
+    component: require('./ref').default,
   }
 ];
 

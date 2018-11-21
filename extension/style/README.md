@@ -1,3 +1,8 @@
+
+- https://speakerdeck.com/vjeux/react-css-in-js-react-france-meetup
+- [CSS Modules](https://glenmaddern.com/articles/css-modules)
+- https://www.w3cplus.com/css/postcss-modules-make-css-great-again.html
+
 ## CSS IN JS
 
 - https://speakerdeck.com/vjeux/react-css-in-js

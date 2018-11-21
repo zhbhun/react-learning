@@ -1,6 +1,8 @@
 Changelog
 ========
 
+- [盘点 React 16.0 ~ 16.5 主要更新及其应用](https://zhuanlan.zhihu.com/p/44452592)
+
 ## v16.4
 
 - Pointer Events

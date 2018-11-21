@@ -7,7 +7,7 @@ Redux
 ## 教程
 
 - [react-redux-links](https://github.com/markerikson/react-redux-links)
-- [awesome-redux](https://github.com/xgrommx/)
+- [awesome-redux](https://github.com/xgrommx/awesome-redux)
 - [redux-tutorial](https://github.com/happypoulp/redux-tutorial)
 - [redux-ecosystem-links](https://github.com/markerikson/)
 - https://www.gitbook.com/book/tonyhb/redux-without-profanity/details
@@ -85,8 +85,11 @@ Redux
     - https://github.com/relax/relax
     - https://github.com/zalmoxisus/redux-devtools-extension
     - https://github.com/erikras/ducks-modular-redux
+    - https://github.com/ioof-holdings/redux-subspace
 
 ## 常见问题
+
+[The Ugly Side Of Redux](https://codeburst.io/the-ugly-side-of-redux-6591fde68200)
 
 - 项目结构
 
@@ -98,6 +101,22 @@ Redux
     - [Presentational and Container Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0)
     - [Switches to a domain-sliced approach to our Redux setup.](https://github.com/infinitered/ignite/pull/356)
     - [Saga Practice](https://github.com/infinitered/ignite/issues/158)
+
+- react redux 组件存在多个实例时的状态隔离
+
+    - [Redux状态管理之痛点、分析与改良](https://segmentfault.com/a/1190000009540007?from=timeline&isappinstalled=1)
+    - [having multiple instance of same reusable redux react components on the same page/route](https://stackoverflow.com/questions/42906358/having-multiple-instance-of-same-reusable-redux-react-components-on-the-same-pag)
+    - [Redux (or Reflux, or ..... ): composing multiple instances of the same store](https://www.reddit.com/r/reactjs/comments/3v9tsv/redux_or_reflux_or_composing_multiple_instances/)
+    - [Question: How to architect multiple instance of a component in the same store ](https://github.com/reduxjs/redux/issues/659)
+    - [Best way for multiple instances of Redux](https://spectrum.chat/thread/c54f2a21-10bb-491d-9a95-86496a11c13d)
+    - [How to organize redux with react-router?](https://github.com/reduxjs/redux/issues/915)
+    - [Question: Handling State Across Multiple Routes ](https://github.com/reduxjs/redux/issues/1235)
+    - [Docs: Usage with React Router](https://github.com/reduxjs/redux/issues/637)
+    - [Redux Store and reusable React components](https://www.nine.com.au/tech/2017/07/13/09/40/redux-namespaces)
+    - [redux-subspace](https://github.com/ioof-holdings/redux-subspace)
+    - [redux-dynamic-reducer](https://github.com/ioof-holdings/redux-dynamic-reducer)
+    - [reducer-action-interceptor](https://github.com/jony89/reducer-action-interceptor)
+    - [Isolating Subapps](https://redux.js.org/recipes/isolatingsubapps) | [Breaking out of Redux paradigm to isolate apps](https://gist.github.com/gaearon/eeee2f619620ab7b55673a4ee2bf8400)
 
 ## 项目示例
 
