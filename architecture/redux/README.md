@@ -19,6 +19,7 @@ Redux
 - [10 Tips for Better Redux Architecture](https://medium.com/javascript-scene/10-tips-for-better-redux-architecture-69250425af44)
 - [redux,一种页面状态管理的优雅方案](https://foio.github.io/redux-state-manage/)
 - [Redux进阶系列3：如何设计action、reducer、selector](http://www.jianshu.com/p/7de6ccb7b76d)
+- [React-redux "connect" explained](https://www.sohamkamani.com/blog/2017/03/31/react-redux-connect-explained/)
 
 ## 异步相关
 
