@@ -88,6 +88,14 @@ Redux
     - https://github.com/erikras/ducks-modular-redux
     - https://github.com/ioof-holdings/redux-subspace
 
+## 开发工具
+
+- [redux-devtools-extension](https://github.com/zalmoxisus/redux-devtools-extension/blob/master/docs/Troubleshooting.md)
+- [redux-devtools](https://github.com/reduxjs/redux-devtools)
+- [Improve your development workflow with Redux DevTools Extension](https://medium.com/@zalmoxis/improve-your-development-workflow-with-redux-devtools-extension-f0379227ff83)
+- [remote-redux-devtools](https://github.com/zalmoxisus/remote-redux-devtools)
+- [redux-logger](https://github.com/LogRocket/redux-logger)
+
 ## 常见问题
 
 [The Ugly Side Of Redux](https://codeburst.io/the-ugly-side-of-redux-6591fde68200)

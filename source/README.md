@@ -29,3 +29,4 @@
 - [react-fiber-architecture](https://github.com/acdlite/react-fiber-architecture)
 - [Making-a-custom-React-renderer](https://github.com/nitin42/Making-a-custom-React-renderer)
 - [React的新引擎—React Fiber是什么？](http://www.infoq.com/cn/articles/what-the-new-engine-of-react)
+- [react-fiber-implement](https://github.com/tranbathanhtung/react-fiber-implement)

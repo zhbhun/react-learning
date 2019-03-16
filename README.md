@@ -1,3 +1,36 @@
+# React
+
+- [Official Website](https://reactjs.org/)
+- [React Blog](https://reactjs.org/blog/)
+- [React Document](https://reactjs.org/docs/getting-started.html) / [React Versions](https://reactjs.org/versions/)
+- [React Terms](https://reactjs.org/docs/glossary.html)
+
+## 社区
+
+- [Stack Overflow Of React](https://stackoverflow.com/tags/reactjs/info)
+- [DEV’s React community](https://dev.to/t/react)
+- [Hashnode’s React community](https://hashnode.com/n/reactjs)
+- [Reactiflux online chat](https://discord.gg/0ZcbPKXt5bZjGY5n)
+- [Reddit’s React community](https://www.reddit.com/r/reactjs/)
+- [Spectrum’s React community](https://spectrum.chat/react)
+
+## 教程
+
+- [Tutorial: Intro to React](https://reactjs.org/tutorial/tutorial.html#before-we-start-the-tutorial)：React 官方入门教程
+- [mackintosh-windows](https://github.com/agm1984/mackintosh-windows)：包含大量的常见问题及处理方式
+- [carlleton/reactjs101](https://github.com/carlleton/reactjs101/tree/zh-CN)：从零开始学 ReactJS
+- [Codecademy: React 101](https://www.codecademy.com/learn/react-101)
+- [Egghead.io: Start Learning React ](https://egghead.io/courses/start-learning-react)
+- [React Crash Course 2018](https://www.youtube.com/watch?v=Ke90Tje7VS0)
+- [React Armory: Learn React by Itself](https://reactarmory.com/guides/learn-react-by-itself)
+- [The Road to Learn React](https://www.robinwieruch.de/the-road-to-learn-react/)
+- [Egghead.io: The Beginner’s Guide to ReactJS](https://egghead.io/courses/the-beginner-s-guide-to-reactjs)
+- [Free React Bootcamp](https://tylermcginnis.com/free-react-bootcamp/)
+- [Getting Started with React – An Overview and Walkthrough](https://www.taniarascia.com/getting-started-with-react/)
+- https://reactfordesigners.com/
+
+---
+
 - https://github.com/facebook/react
 - https://github.com/reactjs/rfcs
 - https://github.com/reactjs/reactjs.org
@@ -10,12 +43,6 @@
 
 # 对比
 - [Why I Chose React Over Vue](https://medium.com/@CalinLeafshade/why-i-chose-react-over-vue-3dd9a230b507)
-
-# 教程
-
-- [mackintosh-windows](https://github.com/agm1984/mackintosh-windows)
-- [carlleton/reactjs101](https://github.com/carlleton/reactjs101/tree/zh-CN)
-- [hello-react-native-custom-renderer](https://github.com/agenthunt/hello-react-native-custom-renderer)
 
 # 书籍
 
